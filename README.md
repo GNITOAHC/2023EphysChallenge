@@ -3,7 +3,7 @@
 ## Pakage Usage
 
 #### 參考網址
-https://pennylane.ai/qml/demos/tutorial_quantum_transfer_learning/
+https://arxiv.org/pdf/1912.08278.pdf
 
 我們採用卷積神經網絡（CNN）與量子神經網路（QNN）組合而成一個Hybird Model實作這個專案
 
