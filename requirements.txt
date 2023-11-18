@@ -1,3 +1,4 @@
 torch==2.1.1
 torchvision==0.16.1
 matplotlib==3.8.2
+pennylane==0.33.1
