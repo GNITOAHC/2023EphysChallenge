@@ -48,3 +48,24 @@ q_depth = 5                 # Depth of the quantum circuit (number of variationa
 gamma_lr_scheduler = 0.1    # Learning rate reduction applied every 10 epochs.
 q_delta = 0.01              # Initial spread of random quantum weights
 ```
+```
+#0.935 in resnet18 and resnet34
+n_qubits = 4                # Number of qubits
+step = 0.001               # Learning rate
+batch_size = 4              # Number of samples for each training step
+num_epochs = 8          # Number of training epochs
+q_depth = 5                 # Depth of the quantum circuit (number of variational layers)
+gamma_lr_scheduler = 0.1    # Learning rate reduction applied every 10 epochs.
+q_delta = 0.01              # Initial spread of random quantum weights
+start_time = time.time()    # Start of the computation timer
+```
+```
+#0.935 in resnet34
+n_qubits = 4                # Number of qubits
+step = 0.0005               # Learning rate
+batch_size = 8              # Number of samples for each training step
+num_epochs = 8          # Number of training epochs
+q_depth = 6                # Depth of the quantum circuit (number of variational layers)
+gamma_lr_scheduler = 0.1    # Learning rate reduction applied every 10 epochs.
+q_delta = 0.01              # Initial spread of random quantum weights
+```
