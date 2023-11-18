@@ -20,6 +20,10 @@ np.random.seed(42)
 # Plotting
 import matplotlib.pyplot as plt
 
+# Enable SSL
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 # OpenMP: number of parallel threads.
 os.environ["OMP_NUM_THREADS"] = "1"
 
@@ -58,9 +62,9 @@ data_transforms = {
     ),
 }
 
-trainset = torchvision.datasets.CIFAR100(root='./data/train', train=True,
+trainset = torchvision.datasets.CIFAR100(root='./data/', train=True,
                                         download=True, transform=data_transforms['train'])
-testset = torchvision.datasets.CIFAR100(root='./data/train', train=False,
+testset = torchvision.datasets.CIFAR100(root='./data/', train=False,
                                        download=True, transform=data_transforms['val'])
 image_datasets_full={'train': trainset, 'val': testset}
 
@@ -374,4 +378,5 @@ def visualize_model(model, num_images=6, fig_name="Predictions"):
 
 
 visualize_model(model_hybrid, num_images=batch_size)
+torch.save(model_hybrid.state_dict(), './save_model.pt')
 plt.show()
